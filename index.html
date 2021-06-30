@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <img src="img/horse1.png" alt="">
-        <img src="img/horse2.png" alt="">
-        <img src="img/horse3.png" alt="">
-        <img src="img/horse4.png" alt="">
-        <img src="img/horse5.png" alt="">
-        <img src="img/horse6.png" alt="">
-        <img src="img/horse7.png" alt="">
-        <img src="img/horse8.png" alt="">
-        <div id="horse" class="animation"></div>
-        <button id="btnStart" style="z-index: 100;">Старт</button> 
-        <button id="btnStop">Стоп</button> 
+    <div class="screen">
+        <h1>Выбирите анимацию</h1>
+        <div class="start-game">
+            <button class="btn" id="btnBird">Bird</button>
+            <p>OR</p>
+            <button class="btn" id="btnHorse">Horse</button>
+        </div>
+    </div>
+    <div class="screen">
+        <button class="btnPrev" id="btnPrev">Назад</button>
+        <div class="container">
+            <img alt="" id="img">
+            <button class="button" id="btnStart" style="z-index: 100;">Старт</button>
+            <button class="button" id="btnStop">Стоп</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
