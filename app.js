@@ -7,7 +7,7 @@ const btnBird = document.querySelector('#btnBird');
 const btnHorse = document.querySelector('#btnHorse');
 const screens = document.querySelectorAll('.screen');
 const btnPrev = document.querySelector('#btnPrev');
-let count = 1;
+let count = 0;
 let timer = null;
 let horseCount = null;
 let birdCount = null;
@@ -35,27 +35,28 @@ btnPrev.addEventListener('click', () => {
     stop();
 })
 
+btnPrev.addEventListener('mousemove', () => {
+
+})
+
 btnStart.addEventListener('click', start);
 
 btnStop.addEventListener('click', stop);
 
-
 function start() {
-   timer = setInterval(() => {
-       if (birdCount) {
-        img2.setAttribute('src', `imgBird/bird${count}.png`)
-        if (count == 10) {
-            count = 1;
-        }
-        count++;
-        // img2.style.width = '130px';
-       } else if (horseCount) {
-        img2.setAttribute('src', `img/horse${count}.png`)
+    timer = setInterval(() => {
+        if (birdCount) {
+            img2.setAttribute('src', `imgBird/bird${count}.png`)
+            if (count == 10) {
+                count = 1;
+            }
+            count++;
+        } else if (horseCount) {
+            img2.setAttribute('src', `img/horse${count}.png`)
            if (count == 8) {
                count = 1;
            }
            count++;
-        //    img2.style.width = '150px';
        }
     }, 80)
     btnStart.style.visibility = "hidden";
